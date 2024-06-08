@@ -49,6 +49,11 @@ Delay CLK-Q post-parásitas:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/1d73a7c2-7758-4c3d-93af-f29609db01c2" width="500"/>
 </p>
 
+Delay del sumador entrada-salida post-parásitas:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/049a844d-ea0d-4181-b0ae-be307ecb5421" width="500"/>
+</p>
+
 
 
 ## Parte c 
