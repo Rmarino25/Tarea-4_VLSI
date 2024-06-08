@@ -33,9 +33,23 @@ Potencia dinámica  del registro completo:
 
 ## Parte b
 Se diseñó y trazó un sumador sencillo de un bit utilizando la celda FAHDLLX0 y un registro sencillo de un bit con la celda DFRRHDLLX0, incluyendo las compuertas lógicas necesarias y asegurando el cumplimiento de DRC y LVS. Se midieron los retardos y el consumo de potencia de estas unidades sencillas de la misma manera que se describió anteriormente.
+
+Post-parásitas:
 <p align="center">
-    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/718459d8-3b17-4e69-8d55-6509ea068b83" width="500"/>
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/718459d8-3b17-4e69-8d55-6509ea068b83" width="600"/>
 </p>
+
+Simulación de prueba:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/f41653b2-36b7-4e97-8aa1-2f9dd524de60" width="500"/>
+</p>
+
+Delay CLK-Q post-parásitas:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/1d73a7c2-7758-4c3d-93af-f29609db01c2" width="500"/>
+</p>
+
+
 
 ## Parte c 
 Se implementó el circuito y el trazado del contador completo.
