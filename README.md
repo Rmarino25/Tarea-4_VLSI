@@ -54,8 +54,203 @@ Delay del sumador entrada-salida post-parásitas:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/049a844d-ea0d-4181-b0ae-be307ecb5421" width="500"/>
 </p>
 
+Consumo de potencia del sumador:
+
+Potencia dinámica del registro de 1 bit:
+
+Potencia dinámica  del registro completo:
 
 
 ## Parte c 
-Se implementó el circuito y el trazado del contador completo.
-### i
+### i. 
+Primeramente, se realizó un diseño en Verilog de un contador que cumpliera con las cuatro condiciones: carga paralela, cuenta ascendente, cuenta descendente y modo de espera (stand-by).
+#### Entradas y salidas
+```SystemVerilog
+module Contador(
+    input clk,
+    input down_up,
+    input DCon,
+    input en,
+    input D0,
+    input D1,
+    input D2,
+    input D3,
+    input D4,
+    input D5,
+    input D6,
+    input D7,
+    input reset,
+    output reg Q0,
+    output reg Q1,
+    output reg Q2,
+    output reg Q3,
+    output reg Q4,
+    output reg Q5,
+    output reg Q6,
+    output reg Q7,
+    output reg TC
+);
+```
+#### Criterio de diseño
+```SystemVerilog
+    function sum;
+        input A;
+        input B;
+        input CI;
+        begin
+            sum = A ^ B ^ CI;
+        end
+    endfunction
+
+    function carry;
+        input A;
+        input B;
+        input CI;
+        reg w1, w2, w3;
+        begin
+            w1 = B & CI;
+            w2 = A & CI;
+            w3 = A & B;
+            carry = w1 | w2 | w3;
+        end
+    endfunction
+
+    reg [7:0] suma = 0;
+    reg [7:0] carry1 = 0;
+
+      always @(posedge clk) begin
+        if (!reset) begin
+            Q0 <= 1'b0;
+            Q1 <= 1'b0;
+            Q2 <= 1'b0;
+            Q3 <= 1'b0;
+            Q4 <= 1'b0;
+            Q5 <= 1'b0;
+            Q6 <= 1'b0;
+            Q7 <= 1'b0;
+            suma <= 8'b00000000;
+            carry1 <= 8'b00000000;
+        end else if (DCon) begin
+            suma[0] <= D0;
+            suma[1] <= D1;
+            suma[2] <= D2;
+            suma[3] <= D3;
+            suma[4] <= D4;
+            suma[5] <= D5;
+            suma[6] <= D6;
+            suma[7] <= D7;
+            Q0 <= D0;
+            Q1 <= D1;
+            Q2 <= D2;
+            Q3 <= D3;
+            Q4 <= D4;
+            Q5 <= D5;
+            Q6 <= D6;
+            Q7 <= D7;
+        end else if (!en) begin
+            carry1[0] = carry(down_up, suma[0], !down_up);
+            suma[0] = sum(down_up, suma[0], !down_up);
+            carry1[1] = carry(down_up, suma[1], carry1[0]);
+            suma[1] = sum(down_up, suma[1], carry1[0]);
+            carry1[2] = carry(down_up, suma[2], carry1[1]);
+            suma[2] = sum(down_up, suma[2], carry1[1]);
+            carry1[3] = carry(down_up, suma[3], carry1[2]);
+            suma[3] = sum(down_up, suma[3], carry1[2]);
+            carry1[4] = carry(down_up, suma[4], carry1[3]);
+            suma[4] = sum(down_up, suma[4], carry1[3]);
+            carry1[5] = carry(down_up, suma[5], carry1[4]);
+            suma[5] = sum(down_up, suma[5], carry1[4]);
+            carry1[6] = carry(down_up, suma[6], carry1[5]);
+            suma[6] = sum(down_up, suma[6], carry1[5]);
+            carry1[7] = carry(down_up, suma[7], carry1[6]);
+            suma[7] = sum(down_up, suma[7], carry1[6]);
+            Q0 <= suma[0];
+            Q1 <= suma[1];
+            Q2 <= suma[2];
+            Q3 <= suma[3];
+            Q4 <= suma[4];
+            Q5 <= suma[5];
+            Q6 <= suma[6];
+            Q7 <= suma[7];
+            TC <= carry1[7] ^ down_up;
+        end
+    end
+endmodule
+```
+Seguidamente, para verificar las cuatro condiciones, se creó el siguiente testbench:
+#### Entradas y salidas
+```SystemVerilog
+module stimulus_contador(
+
+    output reg clk,
+    output reg reset,
+    output reg down_up,
+    output reg load,
+    output reg en,
+    output reg D0,
+    output reg D1,
+    output reg D2,
+    output reg D3,
+    output reg D4,
+    output reg D5,
+    output reg D6,
+    output reg D7
+);
+```
+#### Criterio de diseño
+```SystemVerilog
+    always #2 clk = ~clk;
+
+    initial begin
+        // Inicialización de señales
+        en = 0;
+        clk = 0;
+        reset = 1;
+        down_up = 0;
+        load = 0;
+        D0 = 1'b0;
+        D1 = 1'b1;
+        D2 = 1'b0;
+        D3 = 1'b1;
+        D4 = 1'b0;
+        D5 = 1'b1;
+        D6 = 1'b0;
+        D7 = 1'b1;
+        // Reset del contador
+        reset = 0;
+        #5;
+        reset = 1;
+        // Valor inicial 10
+        #20;
+        en = 1;
+        #10;
+        en = 0;
+        #10;
+        down_up = 1;
+        #50;
+        load = 1;
+        #50;
+        load = 0;
+        #50; 
+        // Fin de la simulación
+        $finish;
+    end
+endmodule
+```
+Lo que da como resultado el siguiente esquemático y simulación:
+
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/46fa72c2-c448-4421-b554-f19734b3296e" width="500"/>
+</p>
+
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/de1ed202-1f09-4a87-9e5f-1e3f378de7c8" width="500"/>
+</p>
+
+### ii.
+Para crear el esquemático que cumpla con las cuatro condiciones, se editó el sumador de 1 bit con un flip-flop y se le incorporó un multiplexor que desempeña la función de carga paralela. Además, se añadieron 7 sumadores más, 7 flip-flops y 7 multiplexores para hacer un sumador de 8 bits. Para verificar si hay un overflow o un underflow, se realizó una operación XOR con el carry del último bit y la entrada de down_up. En la salida del TC, donde se detecta el overflow o el underflow, se agregó un flip-flop. Por otro lado, se añadió un multiplexor extra para controlar el reloj. Esto da como resultado el siguiente esquemático:
+
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/858864a7-c31d-4870-aff5-02876fc9f58f" width="500"/>
+</p>
+
