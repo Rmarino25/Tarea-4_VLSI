@@ -59,9 +59,6 @@ Delay del sumador entrada-salida post-parásitas:
 
 Consumo de potencia del sumador:
 
-Potencia dinámica del registro de 1 bit:
-
-Potencia dinámica  del registro completo:
 
 
 ## Parte c 
