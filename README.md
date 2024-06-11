@@ -25,8 +25,9 @@ Delay del sumador entrada-salida:
 </p>
 
 Consumo de potencia del sumador:
-
-Potencia dinámica del registro de 1 bit:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/da9b0b91-3876-48bd-9f00-d2d97421cf35" width="500"/>
+</p>
 
 Potencia dinámica  del registro completo:
 
