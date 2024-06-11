@@ -30,7 +30,9 @@ Consumo de potencia del sumador:
 </p>
 
 Potencia dinámica  del registro completo:
-
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/4603a182-d1b1-40cb-9918-dde897472073" width="500"/>
+</p>
 
 ## Parte b
 Se diseñó y trazó un sumador sencillo de un bit utilizando la celda FAHDLLX0 y un registro sencillo de un bit con la celda DFRRHDLLX0, incluyendo las compuertas lógicas necesarias y asegurando el cumplimiento de DRC y LVS. Se midieron los retardos y el consumo de potencia de estas unidades sencillas de la misma manera que se describió anteriormente.
