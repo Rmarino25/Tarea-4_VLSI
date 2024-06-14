@@ -264,12 +264,11 @@ Ahora bien el consumo de potencia del anterior esquemático es el siguiente:
 
 ### iii.
 Se realizó el trazado completo del circuito utilizando la metodología de diseño con celdas estándar y la distribución de alimentación. Posteriormente, se verificó el cumplimiento de las reglas de diseño (DRC) y la verificación del esquema lógico contra el diseño (LVS). Luego, se extrajeron las capacitancias parásitas del circuito y se llevó a cabo una nueva simulación de funcionamiento (LPE) utilizando el mismo testbench que en las simulaciones anteriores. Finalmente, se compararon los resultados de esta simulación con los obtenidos previamentes.
-
 <p align="center">
-    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/e966a0f1-2819-4ddb-b9d3-fc7f5218e4b3" width="500"/>
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/ca9c6e70-63e5-44bb-9ca1-7af8de77b817" width="500"/>
 </p>
 <p align="center">
-    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/e966a0f1-2819-4ddb-b9d3-fc7f5218e4b3" width="500"/>
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/f827551e-55a5-4a44-9bb9-68580679f5a9" width="500"/>
 </p>
 Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia aproximada de 166 MHz.
 
