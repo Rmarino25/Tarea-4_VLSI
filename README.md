@@ -254,3 +254,15 @@ Para crear el esquemático que cumpla con las cuatro condiciones, se editó el s
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/858864a7-c31d-4870-aff5-02876fc9f58f" width="500"/>
 </p>
 
+Utilizando el esquemático anterior y el mismo testbench, la simulación resultante coincide con los resultados obtenidos del módulo Verilog:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/72e4ebc0-7286-449f-bd4f-11ae9caee78a" width="500"/>
+</p>
+
+Ahora bien el consumo de potencia del anterior esquemático es el siguiente:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+### ii.
+
+
+
