@@ -270,8 +270,8 @@ Se realizó el trazado completo del circuito utilizando la metodología de dise�
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/f827551e-55a5-4a44-9bb9-68580679f5a9" width="500"/>
 </p>
-Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia aproximada de 166 MHz.
 
+Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia aproximada de 166 MHz, la cual da el mismo resultado que las simulaciones anteriores.
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/c2cc6e78-a7f6-41ae-adfb-5226ed43944b" width="500"/>
 </p>
