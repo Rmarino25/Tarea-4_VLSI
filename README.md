@@ -276,7 +276,7 @@ Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia apr
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/c2cc6e78-a7f6-41ae-adfb-5226ed43944b" width="500"/>
 </p>
 
-### iv.
+### iv Puntos extras.
 Seguidamnte se grafica el valor de la alimentación en los pines de VDD de uno de los flip-flops (FFs) que se encuentra ubicado más lejos de las tiras de alimentación general (straps) y se contrasta con el valor esperado de una alimentación ideal.
 
 <p align="center">
@@ -296,6 +296,13 @@ Layout con el capacitor:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/00a6f02b-3d8c-4061-aca8-8fe4893f2a12" width="500"/>
 </p>
 
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0cb3d166-5e6e-4f81-b4b3-c4646de07cb2" width="500"/>
+</p>
+
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0b4dd9ba-0a6a-47bd-8494-96ac8f11b6eb" width="500"/>
+</p>
 
 
 
