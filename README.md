@@ -263,9 +263,6 @@ Utilizando el esquemático anterior y el mismo testbench, la simulación resulta
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/72e4ebc0-7286-449f-bd4f-11ae9caee78a" width="500"/>
 </p>
 
-Ahora bien el consumo de potencia del anterior esquemático es el siguiente:
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-
 ### iii.
 Se realizó el trazado completo del circuito utilizando la metodología de diseño con celdas estándar y la distribución de alimentación. Posteriormente, se verificó el cumplimiento de las reglas de diseño (DRC) y la verificación del esquema lógico contra el diseño (LVS). Luego, se extrajeron las capacitancias parásitas del circuito y se llevó a cabo una nueva simulación de funcionamiento (LPE) utilizando el mismo testbench que en las simulaciones anteriores. Finalmente, se compararon los resultados de esta simulación con los obtenidos previamentes.
 <p align="center">
@@ -312,6 +309,7 @@ Señal después del capacitor:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0b4dd9ba-0a6a-47bd-8494-96ac8f11b6eb" width="500"/>
 </p>
+
 Al analizar la señal antes de la inserción del capacitor de desacople, se observan picos de voltaje que alcanzan hasta 1.89 V y caídas hasta 1.74 V. Estas fluctuaciones pueden afectar el rendimiento del circuito, especialmente en aplicaciones de alta velocidad. Sin embargo, después de agregar el capacitor de desacople DECAP3HDLL, los picos de voltaje se reducen significativamente. El pico máximo observado después de la inserción del capacitor es de 1.805 V, y la caída mínima es de 1.792 V.
 
 
