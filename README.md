@@ -14,6 +14,8 @@ Simulación de prueba:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/d115e38a-4d4b-4eeb-8ced-79b6270088ef" width="500"/>
 </p>
 
+Seguidamente se puede observar diferentes casos en los que el sumador tiene que cambiar su salidad, dada la conmutación de las entradas. Para este caso de estudio se emplea la entrada A, donde se observan diferentes tiempos. Primeramente, el caso donde A conmuta de O a 1 y la salida de 1 a 0, dando el peor caso con un delay de 432 ps, el segundo caso donde nuevamente a conmuta de 0 a 1 pero la salida de 1 a 0, dando el mejor caso con un delay de 244 ps y un caso intermedio, donde A conmuta de 1 a 0 y la salida de 1 a 0, con un delay de 387 ps. Estos tiempos resultan en la siguiente tabla: 
+
 Delay CLK-Q:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/3759907a-ec1c-4cf2-a3d0-fbca8f511cf6" width="500"/>
