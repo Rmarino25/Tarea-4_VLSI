@@ -2,7 +2,7 @@
 En este proyecto, se desarrollará un contador arriba-abajo de 8 bits con carga paralela y reset asincrónico. El diseño estará optimizado para operar a una frecuencia mínima de 100 MHz, garantizando así un rendimiento eficiente y fiable. El contador permitirá tanto el incremento como el decremento de su valor en función de las señales de control, y podrá cargar valores específicos de manera paralela, lo que facilita su configuración en diversas aplicaciones digitales. Este proyecto combinará conceptos avanzados de diseño digital y técnicas de optimización para cumplir con los requisitos de velocidad y funcionalidad establecidos.
 
 ## Parte a
-Se utilizarán las celdas DFRRHDLLX0 para los flip-flops y FAHDLLX0 para el sumador. Se medirán el retardo y el consumo de potencia del sumador a nivel esquemático, y se identificará la señal crítica de entrada del mismo. Además, se medirá la potencia dinámica de un registro sencillo (1 bit) y de un registro completo (8 bits) con la señal de reloj conmutando a la máxima frecuencia.
+Se utilizarán las celdas DFRRHDLLX0 para los flip-flops y FAHDLLX0 para el sumador. Se medirán el retardo y el consumo de potencia del sumador a nivel esquemático, y se identificará la señal crítica de entrada del mismo. Además, se medirá la potencia de un registro completo (8 bits) con la señal de reloj conmutando a la máxima frecuencia.
 
 El esquemático queda de la sigueinte manera:
 <p align="center">
