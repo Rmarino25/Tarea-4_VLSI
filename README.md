@@ -34,7 +34,7 @@ Delay del sumador entrada-salida:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/bc03ec9c-cd7e-4585-a953-a2399388b4dc" width="500"/>
 </p>
 
-Con respecto a la potencia, se hace estudio tanto de un solo registro, como de los 8 registros finales, dando conmo resultado las siguientes potencias:
+Con respecto a la potencia, se hace estudio tanto del sumador con un registro individual, como de los 8 registros finales, dando conmo resultado las siguientes potencias:
 
 Consumo de potencia del sumador:
 <p align="center">
@@ -49,7 +49,7 @@ Potencia dinámica  del registro completo:
 ## Parte b
 Se diseñó y trazó un sumador sencillo de un bit utilizando la celda FAHDLLX0 y un registro sencillo de un bit con la celda DFRRHDLLX0, incluyendo las compuertas lógicas necesarias y asegurando el cumplimiento de DRC y LVS. Se midieron los retardos y el consumo de potencia de estas unidades sencillas de la misma manera que se describió anteriormente.
 
-Post-parásitas:
+Post-trazado con parásitas:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/718459d8-3b17-4e69-8d55-6509ea068b83" width="600"/>
 </p>
@@ -59,12 +59,12 @@ Simulación de prueba:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/f41653b2-36b7-4e97-8aa1-2f9dd524de60" width="500"/>
 </p>
 
-Delay CLK-Q post-parásitas:
+Delay CLK-Q post-trazo con parásitas:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/1d73a7c2-7758-4c3d-93af-f29609db01c2" width="500"/>
 </p>
 
-Delay del sumador entrada-salida post-parásitas:
+Delay del sumador entrada-salida post-trazo con parásitas:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/049a844d-ea0d-4181-b0ae-be307ecb5421" width="500"/>
 </p>
@@ -74,8 +74,10 @@ Consumo de potencia del sumador:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/bffcda4b-dfc4-4e6b-82dc-302017f582d5" width="500"/>
 </p>
 
+Donde se puede notar un aumento de 21 uW con respeto a sumador a nivel de esquemático.
+
 ## Parte c 
-### i. 
+### i. Modelo Verilog
 Primeramente, se realizó un diseño en Verilog de un contador que cumpliera con las cuatro condiciones: carga paralela, cuenta ascendente, cuenta descendente y modo de espera (stand-by).
 #### Entradas y salidas
 ```SystemVerilog
@@ -260,7 +262,7 @@ Lo que da como resultado el siguiente esquemático y simulación:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/de1ed202-1f09-4a87-9e5f-1e3f378de7c8" width="500"/>
 </p>
 
-### ii.
+### ii. Esquemático correcto por construcción
 Para crear el esquemático que cumpla con las cuatro condiciones, se editó el sumador de 1 bit con un flip-flop y se le incorporó un multiplexor que desempeña la función de carga paralela. Además, se añadieron 7 sumadores más, 7 flip-flops y 7 multiplexores para hacer un sumador de 8 bits. Para verificar si hay un overflow o un underflow, se realizó una operación XOR con el carry del último bit y la entrada de down_up. En la salida del TC, donde se detecta el overflow o el underflow, se agregó un flip-flop. Por otro lado, se añadió un multiplexor extra para controlar el reloj. Esto da como resultado el siguiente esquemático:
 
 <p align="center">
@@ -275,8 +277,17 @@ Utilizando el esquemático anterior y el mismo testbench, la simulación resulta
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/72e4ebc0-7286-449f-bd4f-11ae9caee78a" width="500"/>
 </p>
 
-### iii.
-Se realizó el trazado completo del circuito utilizando la metodología de diseño con celdas estándar y la distribución de alimentación. Posteriormente, se verificó el cumplimiento de las reglas de diseño (DRC) y la verificación del esquema lógico contra el diseño (LVS). Luego, se extrajeron las capacitancias parásitas del circuito y se llevó a cabo una nueva simulación de funcionamiento (LPE) utilizando el mismo testbench que en las simulaciones anteriores. Finalmente, se compararon los resultados de esta simulación con los obtenidos previamentes.
+### iii. Trazado completo del circuito
+Se realizó el trazado completo del circuito utilizando la metodología de diseño con celdas estándar y la distribución de alimentación, donde el strip izquierdo corresponde a VDD, el derecho a GND, ambos en metal 3 y el superior corresponde a el CLK, el cual se generó en metal 4. Posteriormente, se verificó el cumplimiento de las reglas de diseño (DRC) y la verificación del esquema lógico contra el diseño (LVS). Luego, se extrajeron las capacitancias parásitas del circuito y se llevó a cabo una nueva simulación de funcionamiento (LPE) utilizando el mismo testbench que en las simulaciones anteriores. Finalmente, se compararon los resultados de esta simulación con los obtenidos previamentes.
+
+ En la siguiente imagen se puede observar la celda completa:
+
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110320407/9fc1e14a-728f-43e5-80e9-3b5aefe2c4e3" width="500"/>
+</p>
+
+En las siguientes dos imagenes se puede observar un acercamiento de la celta total, para generar un mayor detalle:
+
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/ca9c6e70-63e5-44bb-9ca1-7af8de77b817" width="500"/>
 </p>
@@ -284,7 +295,7 @@ Se realizó el trazado completo del circuito utilizando la metodología de dise�
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/f827551e-55a5-4a44-9bb9-68580679f5a9" width="500"/>
 </p>
 
-Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia aproximada de 166 MHz, la cual da el mismo resultado que las simulaciones anteriores.
+Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia aproximada de 166 MHz, la cual da el mismo resultado que las simulaciones anteriores, donde se puede observar una cuenta ascendete hasta los 45 ns de simulación, donde se conmuta la señal down_up para empezar a generar una cuenta descendente. A los 25 ns conmuta la señal de Stand-by, por lo que el conteo se deteniene, esto se refleja en todas las salidas Q[7:0] y por último, a los 98 ns de simulación, se carga un valor, especificamente de 10101010, para posteriormente seguir contando de manera descendente. 
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/c2cc6e78-a7f6-41ae-adfb-5226ed43944b" width="500"/>
 </p>
@@ -298,12 +309,12 @@ Seguidamente se puede observar varias señales internas dentro del FF, la cual s
 
 Para mejorar la señal, se inserta una celda de capacitancia de desacople junto al flip-flop mencionado. Para el desacople capacitivo, se utiliza la celda DECAP3HDLL. El diseño del layout anterior, ya incluía espacios destinados para la inserción de estos capacitores, lo que facilitó la implementación del desacople capacitivo. Además, se utilizaron celdas de relleno FEED2HDLL para asegurar una distribución uniforme y optimizada del diseño.
 
-Layout sin el capacitor:
+Layout sin el desacople capacitivo:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/b4e9b186-f125-4982-9276-24827cd0c1fd" width="500"/>
 </p>
 
-Layout con el capacitor:
+Layout con el desacople capacitivo:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/00a6f02b-3d8c-4061-aca8-8fe4893f2a12" width="500"/>
 </p>
@@ -322,7 +333,7 @@ Señal después del capacitor:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0b4dd9ba-0a6a-47bd-8494-96ac8f11b6eb" width="500"/>
 </p>
 
-Al analizar la señal antes de la inserción del capacitor de desacople, se observan picos de voltaje que alcanzan hasta 1.89 V y caídas hasta 1.74 V. Estas fluctuaciones pueden afectar el rendimiento del circuito, especialmente en aplicaciones de alta velocidad. Sin embargo, después de agregar el capacitor de desacople DECAP3HDLL, los picos de voltaje se reducen significativamente. El pico máximo observado después de la inserción del capacitor es de 1.805 V, y la caída mínima es de 1.792 V.
+Al analizar la señal antes de la inserción del capacitor de desacople, se observan picos de voltaje que alcanzan hasta 1.89 V y caídas hasta 1.74 V. Estas fluctuaciones pueden afectar el rendimiento del circuito, especialmente en aplicaciones de alta velocidad. Sin embargo, después de agregar el capacitor de desacople DECAP3HDLL, los picos de voltaje se reducen significativamente. El pico máximo observado después de la inserción del capacitor es de 1.805 V, y la caída máxima es de 1.792 V.
 
 
 
