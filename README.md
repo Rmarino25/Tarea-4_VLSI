@@ -58,8 +58,9 @@ Delay del sumador entrada-salida post-parásitas:
 </p>
 
 Consumo de potencia del sumador:
-
-
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/bffcda4b-dfc4-4e6b-82dc-302017f582d5" width="500"/>
+</p>
 
 ## Parte c 
 ### i. 
@@ -255,6 +256,9 @@ Para crear el esquemático que cumpla con las cuatro condiciones, se editó el s
 </p>
 
 Utilizando el esquemático anterior y el mismo testbench, la simulación resultante coincide con los resultados obtenidos del módulo Verilog:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/1dc91bf9-b350-4656-852a-64bc9cefd44a" width="500"/>
+</p>
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/72e4ebc0-7286-449f-bd4f-11ae9caee78a" width="500"/>
 </p>
