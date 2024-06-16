@@ -277,14 +277,13 @@ Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia apr
 </p>
 
 ### iv Puntos extras.
-Seguidamnte se grafica el valor de la alimentación en los pines de VDD de uno de los flip-flops (FFs) que se encuentra ubicado más lejos de las tiras de alimentación general (straps) y se contrasta con el valor esperado de una alimentación ideal.
+Seguidamente se puede observar varias señales internas dentro del FF, la cual se puede observar que estas poseen ruido.
 
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/03c68bae-f73a-4fb3-89a4-176dbf935d16" width="500"/>
 </p>
 
-
-Para mejorar la señal, se inserta una celda de capacitancia de desacople junto al flip-flop mencionado. Para el desacople capacitivo, se utiliza la celda DECAP3HDLL. El layout anterior ya tenía previstos los espacios para este capacitor. Para los rellenos, se emplea la celda FEED2HDLL.
+Para mejorar la señal, se inserta una celda de capacitancia de desacople junto al flip-flop mencionado. Para el desacople capacitivo, se utiliza la celda DECAP3HDLL. El diseño del layout anterior, ya incluía espacios destinados para la inserción de estos capacitores, lo que facilitó la implementación del desacople capacitivo. Además, se utilizaron celdas de relleno FEED2HDLL para asegurar una distribución uniforme y optimizada del diseño.
 
 Layout sin el capacitor:
 <p align="center">
@@ -296,15 +295,21 @@ Layout con el capacitor:
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/00a6f02b-3d8c-4061-aca8-8fe4893f2a12" width="500"/>
 </p>
 
+Al analizar este circuito, se puede observar que las líneas de conexión no son lo suficientemente largas como para provocar una pérdida significativa de señal. Sin embargo, la inserción de un capacitor de desacople junto al flip-flop proporciona una mejora notable en la calidad de la señal. Antes de la inserción del capacitor, se observaron ciertos picos y fluctuaciones en la señal de alimentación, que aunque no eran críticos, podían afectar el rendimiento del circuito en condiciones específicas.
+
+Con la adición del capacitor de desacople DECAP3HDLL, se aprecia que la señal de alimentación se vuelve más estable y uniforme. El capacitor ayuda a suavizar las variaciones de voltaje, eliminando los picos y mejorando la señal. 
+
+Señal antes del capacitor:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0cb3d166-5e6e-4f81-b4b3-c4646de07cb2" width="500"/>
 </p>
 
+Señal después del capacitor:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/0b4dd9ba-0a6a-47bd-8494-96ac8f11b6eb" width="500"/>
 </p>
 
-
+Este efecto es particularmente importante en circuitos digitales de gran velocidad, donde incluso pequeñas perturbaciones en la alimentación pueden causar errores de funcionamiento.
 
 
 
