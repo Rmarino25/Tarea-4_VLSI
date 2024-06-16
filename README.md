@@ -276,7 +276,25 @@ Como resultado, se obtuvo la siguiente simulación utilizando una frecuencia apr
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/c2cc6e78-a7f6-41ae-adfb-5226ed43944b" width="500"/>
 </p>
 
+### iv.
+Seguidamnte se grafica el valor de la alimentación en los pines de VDD de uno de los flip-flops (FFs) que se encuentra ubicado más lejos de las tiras de alimentación general (straps) y se contrasta con el valor esperado de una alimentación ideal.
 
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/03c68bae-f73a-4fb3-89a4-176dbf935d16" width="500"/>
+</p>
+
+
+Para mejorar la señal, se inserta una celda de capacitancia de desacople junto al flip-flop mencionado. Para el desacople capacitivo, se utiliza la celda DECAP3HDLL. El layout anterior ya tenía previstos los espacios para este capacitor. Para los rellenos, se emplea la celda FEED2HDLL.
+
+Layout sin el capacitor:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/b4e9b186-f125-4982-9276-24827cd0c1fd" width="500"/>
+</p>
+
+Layout con el capacitor:
+<p align="center">
+    <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/00a6f02b-3d8c-4061-aca8-8fe4893f2a12" width="500"/>
+</p>
 
 
 
