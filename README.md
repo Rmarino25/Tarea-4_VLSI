@@ -22,6 +22,7 @@ Seguidamente se pueden observar diferentes casos en los que el sumador tiene que
 |Mejor caso     | A 0->1 / Q 0->1                | 242   | 
 |Caso intermedio| A 1->0 / Q 1->0                | 387   |
 
+Aparte de estos, se mide el delay presente en el flip-flop con tal de encontrar el delay total desde la entrada del sumador a la salida del flip-flop.
 
 Delay CLK-Q:
 <p align="center">
@@ -32,6 +33,8 @@ Delay del sumador entrada-salida:
 <p align="center">
     <img src="https://github.com/Rmarino25/Tarea-4_VLSI/assets/110353604/bc03ec9c-cd7e-4585-a953-a2399388b4dc" width="500"/>
 </p>
+
+Con respecto a la potencia, se hace estudio tanto de un solo registro, como de los 8 registros finales, dando conmo resultado las siguientes potencias:
 
 Consumo de potencia del sumador:
 <p align="center">
